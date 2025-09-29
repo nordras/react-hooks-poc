@@ -6,8 +6,10 @@ import IntervalDemo from './pages/IntervalDemo';
 import PreviousDemo from './pages/PreviousDemo';
 import AsyncDemo from './pages/AsyncDemo';
 import EventListenerDemo from './pages/EventListenerDemo';
+import Dashboard from './pages/Dashboard';
 
 const navItems = [
+  { to: '/dashboard', label: 'Dashboard' },
   { to: '/', label: 'useToggle' },
   { to: '/local-storage', label: 'useLocalStorage' },
   { to: '/debounce', label: 'useDebounce' },
@@ -42,7 +44,14 @@ export default function App() {
       </aside>
       <main className="flex-1 p-6">
         <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/" element={<ToggleDemo />} />
+          <Route path="/local-storage" element={<LocalStorageDemo />} />
+          <Route path="/debounce" element={<DebounceDemo />} />
+          <Route path="/interval" element={<IntervalDemo />} />
+          <Route path="/previous" element={<PreviousDemo />} />
+          <Route path="/async" element={<AsyncDemo />} />
+          <Route path="/event-listener" element={<EventListenerDemo />} />
         </Routes>
       </main>
     </div>
