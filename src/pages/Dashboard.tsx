@@ -1,7 +1,7 @@
-import { mockTeams, mockApplicationMetrics } from '@/data/mockData';
-import TeamsList from '@/components/TeamsList';
-import ApplicationsChart from '@/components/ApplicationsChart';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { mockTeams, mockApplicationMetrics } from '../data/mockData';
+import TeamsList from '../components/TeamsList';
+import ApplicationsChart from '../components/ApplicationsChart';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 
 export default function Dashboard() {
   const totalMembers = mockTeams.reduce((sum, team) => sum + team.members.length, 0);

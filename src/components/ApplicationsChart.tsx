@@ -1,5 +1,5 @@
-import { ApplicationMetric } from '@/types/dashboard';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { ApplicationMetric } from '../types/dashboard';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 
 interface ApplicationsChartProps {
   data: ApplicationMetric[];

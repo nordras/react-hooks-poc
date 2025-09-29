@@ -1,4 +1,4 @@
-import { Team, ApplicationMetric } from '@/types/dashboard';
+import { Team, ApplicationMetric } from '../types/dashboard';
 
 export const mockTeams: Team[] = [
   {
