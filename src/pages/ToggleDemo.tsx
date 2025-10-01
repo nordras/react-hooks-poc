@@ -2,16 +2,66 @@ import { useToggle } from '../hooks/useToggle';
 
 export default function ToggleDemo() {
   const { value, toggle, setOn, setOff } = useToggle();
+  
   return (
-    <div className="space-y-4 max-w-xl">
-      <h2 className="text-2xl font-semibold">useToggle</h2>
-      <p>Initial state: <span className="font-mono">{value.toString()}</span></p>
-      <div className="flex gap-2 flex-wrap">
-        <button onClick={toggle} className="px-3 py-1 rounded bg-primary text-primary-foreground">toggle()</button>
-        <button onClick={setOn} className="px-3 py-1 rounded border">setOn()</button>
-        <button onClick={setOff} className="px-3 py-1 rounded border">setOff()</button>
+    <div className="space-y-6 max-w-2xl">
+      <div>
+        <h2 className="text-2xl font-semibold mb-2">useToggle</h2>
+        <p className="text-sm text-gray-600 mb-4">
+          Hook customizado para gerenciar estados booleanos com facilidade
+        </p>
       </div>
-      <pre className="text-xs bg-muted p-3 rounded overflow-auto"><code>{`function useToggle(initial = false) {\n  const [value, setValue] = useState(initial)\n  const toggle = () => setValue(v => !v)\n  ...\n}`}</code></pre>
+
+      <div className="border p-4 rounded">
+        <h3 className="font-medium mb-3">Demonstração</h3>
+        <p className="mb-4">
+          Estado atual: <span className="font-mono text-lg font-bold text-blue-600">{value.toString()}</span>
+        </p>
+        <div className="flex gap-3 flex-wrap">
+          <button 
+            onClick={toggle} 
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            toggle()
+          </button>
+          <button 
+            onClick={setOn} 
+            className="px-4 py-2 border border-green-500 text-green-600 rounded hover:bg-green-50"
+          >
+            setOn()
+          </button>
+          <button 
+            onClick={setOff} 
+            className="px-4 py-2 border border-red-500 text-red-600 rounded hover:bg-red-50"
+          >
+            setOff()
+          </button>
+        </div>
+      </div>
+
+      <div className="border p-4 rounded bg-gray-50">
+        <h3 className="font-medium mb-2">Implementação</h3>
+        <pre className="text-xs overflow-auto">
+{`function useToggle(initial = false) {
+  const [value, setValue] = useState<boolean>(initial);
+  const toggle = useCallback(() => setValue(v => !v), []);
+  const setOn = useCallback(() => setValue(true), []);
+  const setOff = useCallback(() => setValue(false), []);
+  return { value, toggle, setOn, setOff };
+}`}
+        </pre>
+      </div>
+
+      <div className="border p-4 rounded bg-blue-50">
+        <h3 className="font-medium mb-2">Quando usar?</h3>
+        <ul className="text-sm space-y-1 list-disc list-inside">
+          <li>Modais (abrir/fechar)</li>
+          <li>Menus dropdown</li>
+          <li>Mostrar/esconder conteúdo</li>
+          <li>Estados de loading</li>
+          <li>Modo escuro/claro</li>
+        </ul>
+      </div>
     </div>
   );
 }
