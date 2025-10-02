@@ -13,8 +13,6 @@ export default function UseStateDemo() {
           Implementação personalizada do useState usando useReducer
         </p>
       </div>
-
-      {/* Contador */}
       <div className="border p-4 rounded">
         <h3 className="font-medium mb-2">Contador</h3>
         <p className="mb-3">Valor: <span className="font-mono text-lg">{count}</span></p>
@@ -39,8 +37,6 @@ export default function UseStateDemo() {
           </button>
         </div>
       </div>
-
-      {/* Campo de texto */}
       <div className="border p-4 rounded">
         <h3 className="font-medium mb-2">Campo de Texto</h3>
         <input
@@ -53,7 +49,6 @@ export default function UseStateDemo() {
         <p className="text-sm">Você digitou: <span className="font-mono">{text}</span></p>
       </div>
 
-      {/* Toggle de visibilidade */}
       <div className="border p-4 rounded">
         <h3 className="font-medium mb-2">Toggle de Visibilidade</h3>
         <button 
@@ -68,8 +63,6 @@ export default function UseStateDemo() {
           </div>
         )}
       </div>
-
-      {/* Explicação do código */}
       <div className="border p-4 rounded bg-gray-50">
         <h3 className="font-medium mb-2">Como funciona</h3>
         <pre className="text-xs overflow-auto">

@@ -47,17 +47,6 @@ export default function DebounceDemo() {
 }`}
         </pre>
       </div>
-
-      <div className="border p-4 rounded bg-green-50">
-        <h3 className="font-medium mb-2">Quando usar?</h3>
-        <ul className="text-sm space-y-1 list-disc list-inside">
-          <li>Busca em tempo real (evitar muitas requisições)</li>
-          <li>Validação de formulários</li>
-          <li>Auto-save de documentos</li>
-          <li>Resize de janela</li>
-          <li>Scroll infinito</li>
-        </ul>
-      </div>
     </div>
   );
 }

@@ -51,17 +51,6 @@ export default function ToggleDemo() {
 }`}
         </pre>
       </div>
-
-      <div className="border p-4 rounded bg-blue-50">
-        <h3 className="font-medium mb-2">Quando usar?</h3>
-        <ul className="text-sm space-y-1 list-disc list-inside">
-          <li>Modais (abrir/fechar)</li>
-          <li>Menus dropdown</li>
-          <li>Mostrar/esconder conteúdo</li>
-          <li>Estados de loading</li>
-          <li>Modo escuro/claro</li>
-        </ul>
-      </div>
     </div>
   );
 }
