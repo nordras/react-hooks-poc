@@ -1,14 +1,31 @@
-# React Hooks POC
+# React Hooks Lab
 
-Projeto criado para explorar hooks do React (nativos e customizados) e integrar a biblioteca de componentes do shadcn/ui sobre Vite + TypeScript.
+Projeto educacional para aprender hooks do React através de implementações práticas e exemplos interativos.
+
+## 🎯 Objetivos
+
+- **Explicar hooks e quando usar cada um**
+- **Implementar useState do zero** (baseado no artigo da DEV Community)
+- **Demonstrações práticas** de hooks customizados
+- **Manter simplicidade** para foco no aprendizado
+
+## 📊 Diagramas dos Hooks
+
+Consulte o arquivo [`HOOK_DIAGRAMS.md`](HOOK_DIAGRAMS.md) para ver diagramas Mermaid detalhados de como cada hook funciona internamente.
+
+## 🎣 Hooks Implementados
+
+1. **useState do Zero** - Implementação personalizada usando `useReducer`
+2. **useToggle** - Gerenciamento simplificado de estados booleanos
+3. **useDebounce** - Atraso de execução para performance
+4. **useAsync** - Gerenciamento de operações assíncronas
 
 ## Stack
 
 - React 18 + TypeScript
 - Vite
 - React Router
-- Tailwind CSS (tokens já preparados para shadcn/ui)
-- Lucide Icons
+- Tailwind CSS
 
 ## Como iniciar
 
